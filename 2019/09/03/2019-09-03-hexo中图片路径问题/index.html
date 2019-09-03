@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="这里记录一个关于hexo部署后图片的路径问题。 首先，默认的情况下，hexo g命令可以将内容打包生成public文件夹，这个public文件夹下的内容就是部署到github仓库中，在公网上进行访问内容。如果原本的makedown文件中含有外部资源，如果不是hexo默认的文件夹，hexo会将其打包到public的一级子目录下。这意味着你的文件路径存在巨大的隐患。为了解决这个问题，我在_confi">
+<meta name="description" content="这里记录一个关于hexo部署后图片的路径问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-09-03-hexo中图片路径问题">
 <meta property="og:url" content="http://lanshuai2019.github.io/2019/09/03/2019-09-03-hexo中图片路径问题/index.html">
 <meta property="og:site_name" content="清风揽月的博客">
-<meta property="og:description" content="这里记录一个关于hexo部署后图片的路径问题。 首先，默认的情况下，hexo g命令可以将内容打包生成public文件夹，这个public文件夹下的内容就是部署到github仓库中，在公网上进行访问内容。如果原本的makedown文件中含有外部资源，如果不是hexo默认的文件夹，hexo会将其打包到public的一级子目录下。这意味着你的文件路径存在巨大的隐患。为了解决这个问题，我在_confi">
+<meta property="og:description" content="这里记录一个关于hexo部署后图片的路径问题。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://lanshuai2019.github.io/2019/09/03/2019-09-03-hexo中图片路径问题/360%E6%88%AA%E5%9B%BE17860603357961.png">
-<meta property="og:updated_time" content="2019-09-03T07:28:13.115Z">
+<meta property="og:updated_time" content="2019-09-03T08:47:28.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019-09-03-hexo中图片路径问题">
-<meta name="twitter:description" content="这里记录一个关于hexo部署后图片的路径问题。 首先，默认的情况下，hexo g命令可以将内容打包生成public文件夹，这个public文件夹下的内容就是部署到github仓库中，在公网上进行访问内容。如果原本的makedown文件中含有外部资源，如果不是hexo默认的文件夹，hexo会将其打包到public的一级子目录下。这意味着你的文件路径存在巨大的隐患。为了解决这个问题，我在_confi">
+<meta name="twitter:description" content="这里记录一个关于hexo部署后图片的路径问题。">
 <meta name="twitter:image" content="http://lanshuai2019.github.io/2019/09/03/2019-09-03-hexo中图片路径问题/360%E6%88%AA%E5%9B%BE17860603357961.png">
 
 
@@ -304,6 +304,39 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -352,8 +385,9 @@
       
 
       
-        <a id="more"></a>
-<p>这里记录一个关于hexo部署后图片的路径问题。</p>
+        <p>这里记录一个关于hexo部署后图片的路径问题。</p>
+<a id="more"></a>
+
 <p>首先，默认的情况下，<code>hexo g</code>命令可以将内容打包生成<code>public</code>文件夹，这个<code>public</code>文件夹下的内容就是部署到github仓库中，在公网上进行访问内容。<br>如果原本的makedown文件中含有外部资源，如果不是hexo默认的文件夹，hexo会将其打包到public的一级子目录下。<br>这意味着你的文件路径存在巨大的隐患。<br>为了解决这个问题，我在<code>_config.yml</code>文件中将url设置为我的公网url(http://域名),但是部署之后，发现在首页上的图片可以显示，但是如果进入某一个具体博文中，图片就无法加载了。打开控制台，发现图片变为了相对路径，这个相对路径就是在<code>_posts</code>文件夹下编写makedown文件时添加图片的相对路径，那样的话找不到也就是理所当然的了。</p>
 <h6 id="总不能每生成一次，就把public下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？"><a href="#总不能每生成一次，就把public下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？" class="headerlink" title="总不能每生成一次，就把public下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？"></a>总不能每生成一次，就把<code>public</code>下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？</h6><p>在网上看了一些大佬们的方法，发现有一个hexo的图片管理插件十分有用，可以通过下面这条命令安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
@@ -481,7 +515,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -519,6 +571,19 @@
       <!--/noindex-->
       
 
+      
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+          <h3 class="widget-title">Tag Cloud</h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人博客/">个人博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li></ul>
+              </canvas>
+          </div>
+      </div>
       
 
     </div>
@@ -721,6 +786,24 @@
         pageSize:'10' || 10,
     });
   </script>
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: 'd6012debb22d420bc738',
+		  clientSecret: 'b1e46deca596284867f97f4e3d82a02839ee8862',
+		  repo: 'lanShuai2019.github.io',
+		  owner: 'Nanjinger2019',
+		  admin: ['Nanjinger2019'],
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')
+       </script>
 
 
 

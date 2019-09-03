@@ -304,6 +304,39 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -353,17 +386,14 @@
 
       
         
-          
-            <a id="more"></a>
-<p>这里记录一个关于hexo部署后图片的路径问题。</p>
-<p>首先，默认的情况下，<code>hexo g</code>命令可以将内容打包生成<code>public</code>文件夹，这个<code>public</code>文件夹下的内容就是部署到github仓库中，在公网上进行访问内容。<br>如果原本的makedown文件中含有外部资源，如果不是hexo默认的文件夹，hexo会将其打包到public的一级子目录下。<br>这意味着你的文件路径存在巨大的隐患。<br>为了解决这个问题，我在<code>_config.yml</code>文件中将url设置为我的公网url(http://域名),但是部署之后，发现在首页上的图片可以显示，但是如果进入某一个具体博文中，图片就无法加载了。打开控制台，发现图片变为了相对路径，这个相对路径就是在<code>_posts</code>文件夹下编写makedown文件时添加图片的相对路径，那样的话找不到也就是理所当然的了。</p>
-<h6 id="总不能每生成一次，就把public下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？"><a href="#总不能每生成一次，就把public下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？" class="headerlink" title="总不能每生成一次，就把public下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？"></a>总不能每生成一次，就把<code>public</code>下的html文件都改一遍把？那么，有没有一种行之有效的解决办法的？</h6><p>在网上看了一些大佬们的方法，发现有一个hexo的图片管理插件十分有用，可以通过下面这条命令安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
-<p>安装之后，每<code>hexo new</code>一个makedown文件，就会生成一个同名的文件夹。在编写该makedown文件的时候，直接将图片放到该文件夹下。方便又快捷。<br><img src="/2019/09/03/2019-09-03-hexo中图片路径问题/360%E6%88%AA%E5%9B%BE17860603357961.png" alt="生成同名文件夹"></p>
-<p>之后，使用<code>hexo g</code>命令打包，博客相关的资源会放到生成的博客<code>index.html</code>同目录下，这样，便有效解决了图片路径问题</p>
-
-          
+          <p>这里记录一个关于hexo部署后图片的路径问题。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/03/2019-09-03-hexo中图片路径问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -396,6 +426,9 @@
   </article>
 
 
+      <!-- 首页显示标签  -->
+      	    
+      		<!-- 首页显示标签 end -->
     
       
 
@@ -452,6 +485,39 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -501,85 +567,14 @@
 
       
         
-          
-            <p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可。</p>
-<h3 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h3><p>定位到hexo站点目录下使用<code>Git checkout</code> 代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <code>站点配置文件</code>， 找到 theme 字段，并将其值更改为 next。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 hexo clean 来清除 Hexo 的缓存。</p>
-<h3 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h3><p>首先启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 hexo s –debug。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-
-<p>此时即可使用浏览器访问 <a href="http://localhost:4000，检查站点是否正确运行。" target="_blank" rel="noopener">http://localhost:4000，检查站点是否正确运行。</a></p>
-<blockquote>
-<p>当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse<br><img src="/2019/09/03/2019-09-03-我的hexo小记-三/nextInstalled.png" alt="NexT安装成功"></p>
-</blockquote>
-<h3 id="选择-Scheme"><a href="#选择-Scheme" class="headerlink" title="选择 Scheme"></a>选择 Scheme</h3><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p>
-<ul>
-<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
-<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
-<li>Pisces - 双栏 Scheme，小家碧玉似的清新<br>Scheme 的切换通过更改 主题配置文件，搜索<code>scheme</code>关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。</li>
-</ul>
-<h3 id="设置-语言"><a href="#设置-语言" class="headerlink" title="设置 语言"></a>设置 语言</h3><p>编辑 站点配置文件， 将<code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置-菜单"><a href="#设置-菜单" class="headerlink" title="设置 菜单"></a>设置 菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="https://fontawesome.com/?from=io" target="_blank" rel="noopener">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。<br>编辑<code>主题配置文件</code>，修改以下内容：<br>设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code> 是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  #about: /about</span><br><span class="line">  #categories: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /404.html</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>若你的站点运行在子目录中，请将链接前缀的 / 去掉  </p>
-</blockquote>
-<p>设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。<br>以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  commonweal: 公益404</span><br><span class="line">  something: 有料</span><br></pre></td></tr></table></figure>
-
-<p>设定菜单项的图标，对应的字段是 <code>menu_icons</code>。 此设定格式是 <code>item name: icon name</code>，其中 <code>item name</code> 与上一步所配置的菜单名字对应，<code>icon name</code> 是 <code>Font Awesome</code> 图标的 名字。而 <code>enable</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mapping.</span><br><span class="line">  home: home</span><br><span class="line">  about: user</span><br><span class="line">  categories: th</span><br><span class="line">  tags: tags</span><br><span class="line">  archives: archive</span><br><span class="line">  commonweal: heartbeat</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用  作为图标。</p>
-</blockquote>
-<h3 id="设置-侧栏"><a href="#设置-侧栏" class="headerlink" title="设置 侧栏"></a>设置 侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。<br>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
-<ul>
-<li>left - 靠左放置</li>
-<li>right - 靠右放置<blockquote>
-<p>目前仅 Pisces Scheme 支持 position 配置。影响版本5.0.0及更低版本。  </p>
-</blockquote>
-</li>
-</ul>
-<p>设置侧栏显示的时机，修改 sidebar.display 的值，支持的选项有：</p>
-<ul>
-<li>post - 默认行为，在文章页面（拥有目录列表）时显示</li>
-<li>always - 在所有页面中都显示</li>
-<li>hide - 在所有页面中都隐藏（可以手动展开）</li>
-<li>remove - 完全移除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  display: post</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="设置-头像"><a href="#设置-头像" class="headerlink" title="设置 头像"></a>设置 头像</h3><p>编辑 主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
-<table>
-<thead>
-<tr>
-<th>地址</th>
-<th align="left">值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>完整的互联网 URI</td>
-<td align="left"><a href="http://example.com/avatar.png" target="_blank" rel="noopener">http://example.com/avatar.png</a></td>
-</tr>
-<tr>
-<td>站点内的地址</td>
-<td align="left">将头像放置主题目录下的 source/uploads/ （新建 uploads 目录若不存在)<br> 配置为：avatar: /uploads/avatar.png<br>或者 放置在 source/images/ 目录下<br>配置为：avatar: /images/avatar.png /</td>
-</tr>
-</tbody></table>
-<h3 id="设置-作者昵称"><a href="#设置-作者昵称" class="headerlink" title="设置 作者昵称"></a>设置 作者昵称</h3><p>编辑 <code>站点配置文件</code>， 设置 <code>author</code> 为你的昵称。</p>
-<h3 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h3><p>编辑 <code>站点配置文件</code>， 设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
-<h3 id="leanCloud进行访问统计"><a href="#leanCloud进行访问统计" class="headerlink" title="leanCloud进行访问统计"></a>leanCloud进行访问统计</h3><p>可以参照这篇博文，亲测有效<br><a href="https://blog.csdn.net/lijing742180/article/details/87928554" target="_blank" rel="noopener">https://blog.csdn.net/lijing742180/article/details/87928554</a></p>
-
-          
+          <p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/03/2019-09-03-我的hexo小记-三/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -612,6 +607,9 @@
   </article>
 
 
+      <!-- 首页显示标签  -->
+      	    
+      		<!-- 首页显示标签 end -->
     
       
 
@@ -668,6 +666,39 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -717,24 +748,14 @@
 
       
         
-          
-            <p>本文将记录我的hexo博客在github上的搭建过程。</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
-<li>github账号，没有的话注册一个</li>
-<li>本地hexo项目</li>
-<li>node.js、git相关知识</li>
-<li>已经注册并备案的域名</li>
-</ul>
-<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p> 在github上新建一个仓库用于存放个人博客的代码和文章，一般命名为<code>用户名.github.io</code><br><br> 将<code>仓库url + .git</code>写入<code>_config.yml</code>文件中的<code>deploy</code>下的<code>repo</code>中，运行一下指令，将项目代码放到github中<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d   // d 的意思是 deploy 部署</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中输入’github用户名 + github.io`，如果可以看到博客首页，则证明博客已部署到github</p>
-<h4 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h4><p>如果不绑定域名的话，可以使用github的默认<code>用户名.github.io</code>来访问，但是如果想更有自己的个性，可以绑定到域名。<br>我的域名是<code>www.geeklan.cn</code>， 在腾讯云上购买，备案等待了小一个月时间。</p>
-<p>1）在github项目中添加<code>CNAME</code>文件, 文件中填写不带www的域名，如我备案的域名是<code>www.geeklan.cn</code>，则在CNAME中填写的域名是<code>geeklan.cn</code></p>
-<p>2）在github中配置解析的域名地址。到仓库主页面，找到<code>setting</code>,然后进入setting选项卡，找到<code>github Page</code>下的<code>custom domain</code>,填入域名，保存。<br><img src="/2019/09/02/2019-09-02我的hexo小记-二/setting.png" alt="setting"><br><img src="/2019/09/02/2019-09-02我的hexo小记-二/githubPage.png" alt="填写域名"></p>
-<p>3）域名解析，在域名控制台中（可通过购买域名的服务商官网进入，我使用的是腾讯云）添加域名解析<br><img src="/2019/09/02/2019-09-02我的hexo小记-二/360%E6%88%AA%E5%9B%BE17650110105136123.png" alt="域名解析控制台"><br>一般添加2个<br><br>一个主机记录为<code>www</code>，记录类型<code>A</code>,记录值即为你在命令行界面ping <code>用户名.github.io</code>得到的IP地址<br><br>另一个主机记录为<code>@</code>,记录类型为’CNAME’，记录值是<code>用户名.github.io</code><br>保存，生效时间一般为10分钟，</p>
-<p>4）域名生效后，访问域名，看是否能得到和原本在 <code>用户名.github.io</code>下同样的效果，是则hexo博客部署成功。</p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>至此为止，我们已经完成了0到1的突破，拥有了自己的博客。如果说把个人博客看做一栋大厦，我们已经完成了大厦的建造，虽然目前来看就是个毛坯房，但至少让我们有了一个可以遮风避雨的地方，至于样式、主题、模块种种，以及今后的工作之路，乃至人生之路，我只能说：面包会有的，一切都会有的。</p>
-
-          
+          <p>本文将记录我的hexo博客在github上的搭建过程。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/02/2019-09-02我的hexo小记-二/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -767,6 +788,9 @@
   </article>
 
 
+      <!-- 首页显示标签  -->
+      	    
+      		<!-- 首页显示标签 end -->
     
       
 
@@ -823,6 +847,39 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -872,41 +929,15 @@
 
       
         
-          
-            <p>&#160; &#160; &#160; &#160;本来大三的时候就打算做一个个人的博客项目，但是后来由于各种项目、实习、找工作以及家里的事未能如愿。现在终于暂有时间来搭建一个属于自己的博客，本文将记录我的博客搭建历程。</p>
+          <p>&#160; &#160; &#160; &#160;本来大三的时候就打算做一个个人的博客项目，但是后来由于各种项目、实习、找工作以及家里的事未能如愿。现在终于暂有时间来搭建一个属于自己的博客，本文将记录我的博客搭建历程。</p>
 <p>&#160; &#160; &#160; &#160;我选择hexo来搭建本博客。hexo是一个基于Node.js简便易用的博客框架, 较其前辈WordPress、tale等更加轻便、更易于搭建且功能更加强大。</p>
-<h3 id="hexo基本环境搭建"><a href="#hexo基本环境搭建" class="headerlink" title="hexo基本环境搭建"></a>hexo基本环境搭建</h3><h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><p>&#160; &#160; &#160; &#160;安装hexo之前首先要安装node环境，在Windows中的安装过程如下：</p>
-<p>a. 下载node安装包，<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载地址</a>。</p>
-<p>&#160; &#160; &#160; &#160;这里要注意，node的更新频率比较快，所以官网中的node一般有两种，一种是最新版的node(current)，另一种是稳定版的node(LTS,long time support 长期支持)，这里推荐大家下载稳定版的node。</p>
-<p>b. 安装node</p>
-<p>&#160; &#160; &#160; &#160;下载了node的安装文件之后，一直单击下一步即可完成安装。不过要在安装的过程中记得自己安装node的目录。</p>
-<p>c. 配置环境变量</p>
-<p>&#160; &#160; &#160; &#160;右击我的电脑(也可能叫其他名字)，选择属性-&gt;高级系统设置-&gt;环境变量-&gt;path，将安装目录复制到path中，如果没有列表界面，需要在前面添加分号与其他环境变量隔开。</p>
-<p>&#160; &#160; &#160; &#160;Win+R,输入cmd，打开命令行界面，输入以下命令，如果能够得到node版本号的话，说明node安装成功。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -version</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装Git-下载地址"><a href="#安装Git-下载地址" class="headerlink" title="安装Git 下载地址"></a>安装Git <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载地址</a></h4><p>&#160; &#160; &#160; &#160; 下载Git，一路next，在桌面上右击，选项中出现’git GUI’、’git bash’，点击，出现命令行界面，说明Git安装成功。</p>
-<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>a. 创建一个空文件夹，作为hexo的测试<br><br>b. cd 到此目录下<br><br>c. 输入指令，从npm库安装hexo，为简便起见，这里安装hexo的脚手架</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>d. 初始化hexo，生成Hexo脚手架</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>e. 素质三连，清理、生成、启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>如果启动成功，将在控制台出现运行地址<br><img src="/2019/09/02/2019-09-02-我的hexo小记/360%E6%88%AA%E5%9B%BE17571119404183.png" alt="启动成功"><br>打开之后出现以下界面说明成功<br><img src="/2019/09/02/2019-09-02-我的hexo小记/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%95%8C%E9%9D%A2.png" alt="启动成功"></p>
-<h3 id="Hexo的目录结构"><a href="#Hexo的目录结构" class="headerlink" title="Hexo的目录结构"></a>Hexo的目录结构</h3><p>hexo脚手架搭建之后，目录如下所示<br><br><img src="/2019/09/02/2019-09-02-我的hexo小记/360%E6%88%AA%E5%9B%BE17001014434783.png" alt="hexo目录结构"></p>
-<h4 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h4><p>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。</p>
-<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>hexo框架的参数和所依赖插件</p>
-<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>scaffolds是“脚手架、骨架”的意思，当你新建一篇文章（hexo new ‘title’）的时候，hexo是根据这个目录下的文件进行构建的。基本不用关心。</p>
-<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>这个目录很重要，新建的文章都是在保存在这个目录下的.<br>_posts 。需要新建的博文都放在 _posts 目录下。</p>
-<p>_posts 目录下是一个个 markdown 文件。你应该可以看到一个 hello-world.md 的文件，文章就在这个文件中编辑。</p>
-<p>_posts 目录下的md文件，会被编译成html文件，放到 public （此文件现在应该没有，因为你还没有编译过）文件夹下。</p>
-<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>网站主题目录，hexo有非常好的主题拓展，支持的主题也很丰富。该目录下，每一个子目录就是一个主题。</p>
-<h3 id="config-yml文件"><a href="#config-yml文件" class="headerlink" title="_config.yml文件"></a>_config.yml文件</h3><p>_config.yml 采用YAML语法格式。<br><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">具体配置</a>可以参考官方文档，_config.yml 文件中的内容，并对主要参数做简单的介绍</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/02/2019-09-02-我的hexo小记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -939,6 +970,19 @@
   </article>
 
 
+      <!-- 首页显示标签  -->
+      	    
+      	      <div class="post-tags">
+      	        
+      	            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+      	        
+      	            <a href="/tags/个人博客/" rel="tag"><i class="fa fa-tag"></i> 个人博客</a>
+      	        
+      	            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+      	        
+      	      </div>
+      	    
+      		<!-- 首页显示标签 end -->
     
   </section>
 
@@ -995,7 +1039,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -1017,6 +1079,19 @@
 
       
 
+      
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+          <h3 class="widget-title">Tag Cloud</h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人博客/">个人博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li></ul>
+              </canvas>
+          </div>
+      </div>
       
 
     </div>
@@ -1215,6 +1290,8 @@
         pageSize:'10' || 10,
     });
   </script>
+
+
 
 
 
