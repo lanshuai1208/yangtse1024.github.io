@@ -82,7 +82,7 @@
 <meta name="description" content="一个兴趣使然的小小博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="清风揽月的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://www.geeklan.cn/index.html">
 <meta property="og:site_name" content="清风揽月的博客">
 <meta property="og:description" content="一个兴趣使然的小小博客">
 <meta property="og:locale" content="zh-Hans">
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://www.geeklan.cn/">
 
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/2019-09-03-我的hexo小记-三/">
+    <link itemprop="mainEntityOfPage" href="http://www.geeklan.cn/2019/09/03/2019-09-03-我的hexo小记-三/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="清风揽月">
@@ -344,30 +344,30 @@
         
           
             <p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可。</p>
-<h3 id="1-安装NexT"><a href="#1-安装NexT" class="headerlink" title="1. 安装NexT"></a>1. 安装NexT</h3><p>定位到hexo站点目录下使用<code>Git checkout</code> 代码：</p>
+<h3 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h3><p>定位到hexo站点目录下使用<code>Git checkout</code> 代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2. 启用主题"></a>2. 启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <code>站点配置文件</code>， 找到 theme 字段，并将其值更改为 next。</p>
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <code>站点配置文件</code>， 找到 theme 字段，并将其值更改为 next。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
 <p>到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 hexo clean 来清除 Hexo 的缓存。</p>
-<h3 id="3-验证主题"><a href="#3-验证主题" class="headerlink" title="3. 验证主题"></a>3. 验证主题</h3><p>首先启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 hexo s –debug。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p>
+<h3 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h3><p>首先启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 hexo s –debug。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
 
 <p>此时即可使用浏览器访问 <a href="http://localhost:4000，检查站点是否正确运行。" target="_blank" rel="noopener">http://localhost:4000，检查站点是否正确运行。</a></p>
 <blockquote>
 <p>当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse<br><img src="../img/nextInstalled.png" alt="NexT安装成功"></p>
 </blockquote>
-<h3 id="4-选择-Scheme"><a href="#4-选择-Scheme" class="headerlink" title="4. 选择 Scheme"></a>4. 选择 Scheme</h3><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p>
+<h3 id="选择-Scheme"><a href="#选择-Scheme" class="headerlink" title="选择 Scheme"></a>选择 Scheme</h3><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p>
 <ul>
 <li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
 <li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
 <li>Pisces - 双栏 Scheme，小家碧玉似的清新<br>Scheme 的切换通过更改 主题配置文件，搜索<code>scheme</code>关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。</li>
 </ul>
-<h3 id="5-设置-语言"><a href="#5-设置-语言" class="headerlink" title="5. 设置 语言"></a>5. 设置 语言</h3><p>编辑 站点配置文件， 将<code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
+<h3 id="设置-语言"><a href="#设置-语言" class="headerlink" title="设置 语言"></a>设置 语言</h3><p>编辑 站点配置文件， 将<code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
 
-<h3 id="6-设置-菜单"><a href="#6-设置-菜单" class="headerlink" title="6. 设置 菜单"></a>6. 设置 菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="https://fontawesome.com/?from=io" target="_blank" rel="noopener">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。<br>编辑<code>主题配置文件</code>，修改以下内容：<br>设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code> 是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
+<h3 id="设置-菜单"><a href="#设置-菜单" class="headerlink" title="设置 菜单"></a>设置 菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="https://fontawesome.com/?from=io" target="_blank" rel="noopener">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。<br>编辑<code>主题配置文件</code>，修改以下内容：<br>设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code> 是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  #about: /about</span><br><span class="line">  #categories: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /404.html</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -382,7 +382,7 @@
 <blockquote>
 <p>在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用  作为图标。</p>
 </blockquote>
-<h3 id="7-设置-侧栏"><a href="#7-设置-侧栏" class="headerlink" title="7. 设置 侧栏"></a>7. 设置 侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。<br>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
+<h3 id="设置-侧栏"><a href="#设置-侧栏" class="headerlink" title="设置 侧栏"></a>设置 侧栏</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。<br>设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
 <ul>
 <li>left - 靠左放置</li>
 <li>right - 靠右放置<blockquote>
@@ -399,7 +399,7 @@
 
 </li>
 </ul>
-<h3 id="8-设置-头像"><a href="#8-设置-头像" class="headerlink" title="8. 设置 头像"></a>8. 设置 头像</h3><p>编辑 主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
+<h3 id="设置-头像"><a href="#设置-头像" class="headerlink" title="设置 头像"></a>设置 头像</h3><p>编辑 主题配置文件， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
 <table>
 <thead>
 <tr>
@@ -416,9 +416,9 @@
 <td align="left">将头像放置主题目录下的 source/uploads/ （新建 uploads 目录若不存在)<br> 配置为：avatar: /uploads/avatar.png<br>或者 放置在 source/images/ 目录下<br>配置为：avatar: /images/avatar.png /</td>
 </tr>
 </tbody></table>
-<h3 id="9-设置-作者昵称"><a href="#9-设置-作者昵称" class="headerlink" title="9. 设置 作者昵称"></a>9. 设置 作者昵称</h3><p>编辑 <code>站点配置文件</code>， 设置 <code>author</code> 为你的昵称。</p>
-<h3 id="10-站点描述"><a href="#10-站点描述" class="headerlink" title="10. 站点描述"></a>10. 站点描述</h3><p>编辑 <code>站点配置文件</code>， 设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
-<h3 id="11-leanCloud进行访问统计"><a href="#11-leanCloud进行访问统计" class="headerlink" title="11. leanCloud进行访问统计"></a>11. leanCloud进行访问统计</h3><p>可以参照这篇博文，亲测有效<br><a href="https://blog.csdn.net/lijing742180/article/details/87928554" target="_blank" rel="noopener">https://blog.csdn.net/lijing742180/article/details/87928554</a></p>
+<h3 id="设置-作者昵称"><a href="#设置-作者昵称" class="headerlink" title="设置 作者昵称"></a>设置 作者昵称</h3><p>编辑 <code>站点配置文件</code>， 设置 <code>author</code> 为你的昵称。</p>
+<h3 id="站点描述"><a href="#站点描述" class="headerlink" title="站点描述"></a>站点描述</h3><p>编辑 <code>站点配置文件</code>， 设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+<h3 id="leanCloud进行访问统计"><a href="#leanCloud进行访问统计" class="headerlink" title="leanCloud进行访问统计"></a>leanCloud进行访问统计</h3><p>可以参照这篇博文，亲测有效<br><a href="https://blog.csdn.net/lijing742180/article/details/87928554" target="_blank" rel="noopener">https://blog.csdn.net/lijing742180/article/details/87928554</a></p>
 
           
         
@@ -467,7 +467,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/02/2019-09-02我的hexo小记-二/">
+    <link itemprop="mainEntityOfPage" href="http://www.geeklan.cn/2019/09/02/2019-09-02我的hexo小记-二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="清风揽月">
@@ -549,15 +549,15 @@
         
           
             <p>本文将记录我的hexo博客在github上的搭建过程。</p>
-<h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h3><ul>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
 <li>github账号，没有的话注册一个</li>
 <li>本地hexo项目</li>
 <li>node.js、git相关知识</li>
 <li>已经注册并备案的域名</li>
 </ul>
-<h3 id="2-搭建博客"><a href="#2-搭建博客" class="headerlink" title="2. 搭建博客"></a>2. 搭建博客</h3><h4 id="2-1-创建仓库"><a href="#2-1-创建仓库" class="headerlink" title="2.1 创建仓库"></a>2.1 创建仓库</h4><p> 在github上新建一个仓库用于存放个人博客的代码和文章，一般命名为<code>用户名.github.io</code><br><br> 将<code>仓库url + .git</code>写入<code>_config.yml</code>文件中的<code>deploy</code>下的<code>repo</code>中，运行一下指令，将项目代码放到github中<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d   // d 的意思是 deploy 部署</span><br></pre></td></tr></table></figure></p>
+<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p> 在github上新建一个仓库用于存放个人博客的代码和文章，一般命名为<code>用户名.github.io</code><br><br> 将<code>仓库url + .git</code>写入<code>_config.yml</code>文件中的<code>deploy</code>下的<code>repo</code>中，运行一下指令，将项目代码放到github中<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d   // d 的意思是 deploy 部署</span><br></pre></td></tr></table></figure></p>
 <p>在浏览器中输入’github用户名 + github.io`，如果可以看到博客首页，则证明博客已部署到github</p>
-<h4 id="2-2-绑定域名"><a href="#2-2-绑定域名" class="headerlink" title="2.2 绑定域名"></a>2.2 绑定域名</h4><p>如果不绑定域名的话，可以使用github的默认<code>用户名.github.io</code>来访问，但是如果想更有自己的个性，可以绑定到域名。<br>我的域名是<code>www.geeklan.cn</code>， 在腾讯云上购买，备案等待了小一个月时间。</p>
+<h4 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h4><p>如果不绑定域名的话，可以使用github的默认<code>用户名.github.io</code>来访问，但是如果想更有自己的个性，可以绑定到域名。<br>我的域名是<code>www.geeklan.cn</code>， 在腾讯云上购买，备案等待了小一个月时间。</p>
 <p>1）在github项目中添加<code>CNAME</code>文件, 文件中填写不带www的域名，如我备案的域名是<code>www.geeklan.cn</code>，则在CNAME中填写的域名是<code>geeklan.cn</code></p>
 <p>2）在github中配置解析的域名地址。到仓库主页面，找到<code>setting</code>,然后进入setting选项卡，找到<code>github Page</code>下的<code>custom domain</code>,填入域名，保存。<br><img src="../img/setting.png" alt="setting"><br><img src="../img/githubPage.png" alt="填写域名"></p>
 <p>3）域名解析，在域名控制台中（可通过购买域名的服务商官网进入，我使用的是腾讯云）添加域名解析<br><img src="../img/360%E6%88%AA%E5%9B%BE17650110105136123.png" alt="域名解析控制台"><br>一般添加2个<br><br>一个主机记录为<code>www</code>，记录类型<code>A</code>,记录值即为你在命令行界面ping <code>用户名.github.io</code>得到的IP地址<br><br>另一个主机记录为<code>@</code>,记录类型为’CNAME’，记录值是<code>用户名.github.io</code><br>保存，生效时间一般为10分钟，</p>
@@ -611,7 +611,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/02/2019-09-02-我的hexo小记/">
+    <link itemprop="mainEntityOfPage" href="http://www.geeklan.cn/2019/09/02/2019-09-02-我的hexo小记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="清风揽月">
@@ -694,7 +694,7 @@
           
             <p>&#160; &#160; &#160; &#160;本来大三的时候就打算做一个个人的博客项目，但是后来由于各种项目、实习、找工作以及家里的事未能如愿。现在终于暂有时间来搭建一个属于自己的博客，本文将记录我的博客搭建历程。</p>
 <p>&#160; &#160; &#160; &#160;我选择hexo来搭建本博客。hexo是一个基于Node.js简便易用的博客框架, 较其前辈WordPress、tale等更加轻便、更易于搭建且功能更加强大。</p>
-<h3 id="1-hexo基本环境搭建"><a href="#1-hexo基本环境搭建" class="headerlink" title="1. hexo基本环境搭建"></a>1. hexo基本环境搭建</h3><h4 id="1-1-安装node"><a href="#1-1-安装node" class="headerlink" title="1.1 安装node"></a>1.1 安装node</h4><p>&#160; &#160; &#160; &#160;安装hexo之前首先要安装node环境，在Windows中的安装过程如下：</p>
+<h3 id="hexo基本环境搭建"><a href="#hexo基本环境搭建" class="headerlink" title="hexo基本环境搭建"></a>hexo基本环境搭建</h3><h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><p>&#160; &#160; &#160; &#160;安装hexo之前首先要安装node环境，在Windows中的安装过程如下：</p>
 <p>a. 下载node安装包，<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载地址</a>。</p>
 <p>&#160; &#160; &#160; &#160;这里要注意，node的更新频率比较快，所以官网中的node一般有两种，一种是最新版的node(current)，另一种是稳定版的node(LTS,long time support 长期支持)，这里推荐大家下载稳定版的node。</p>
 <p>b. 安装node</p>
@@ -704,8 +704,8 @@
 <p>&#160; &#160; &#160; &#160;Win+R,输入cmd，打开命令行界面，输入以下命令，如果能够得到node版本号的话，说明node安装成功。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -version</span><br></pre></td></tr></table></figure>
 
-<h4 id="1-2-安装Git-下载地址"><a href="#1-2-安装Git-下载地址" class="headerlink" title="1.2 安装Git 下载地址"></a>1.2 安装Git <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载地址</a></h4><p>&#160; &#160; &#160; &#160; 下载Git，一路next，在桌面上右击，选项中出现’git GUI’、’git bash’，点击，出现命令行界面，说明Git安装成功。</p>
-<h4 id="1-3-安装Hexo"><a href="#1-3-安装Hexo" class="headerlink" title="1.3 安装Hexo"></a>1.3 安装Hexo</h4><p>a. 创建一个空文件夹，作为hexo的测试<br><br>b. cd 到此目录下<br><br>c. 输入指令，从npm库安装hexo，为简便起见，这里安装hexo的脚手架</p>
+<h4 id="安装Git-下载地址"><a href="#安装Git-下载地址" class="headerlink" title="安装Git 下载地址"></a>安装Git <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载地址</a></h4><p>&#160; &#160; &#160; &#160; 下载Git，一路next，在桌面上右击，选项中出现’git GUI’、’git bash’，点击，出现命令行界面，说明Git安装成功。</p>
+<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>a. 创建一个空文件夹，作为hexo的测试<br><br>b. cd 到此目录下<br><br>c. 输入指令，从npm库安装hexo，为简便起见，这里安装hexo的脚手架</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
 <p>d. 初始化hexo，生成Hexo脚手架</p>
@@ -715,7 +715,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>如果启动成功，将在控制台出现运行地址<br><img src="../img/360%E6%88%AA%E5%9B%BE17571119404183.png" alt="启动成功"><br>打开之后出现以下界面说明成功<br><img src="../img/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%95%8C%E9%9D%A2.png" alt="启动成功"></p>
-<h3 id="2-Hexo的目录结构"><a href="#2-Hexo的目录结构" class="headerlink" title="2. Hexo的目录结构"></a>2. Hexo的目录结构</h3><p>hexo脚手架搭建之后，目录如下所示<br><br><img src="../img/360%E6%88%AA%E5%9B%BE17001014434783.png" alt="hexo目录结构"></p>
+<h3 id="Hexo的目录结构"><a href="#Hexo的目录结构" class="headerlink" title="Hexo的目录结构"></a>Hexo的目录结构</h3><p>hexo脚手架搭建之后，目录如下所示<br><br><img src="../img/360%E6%88%AA%E5%9B%BE17001014434783.png" alt="hexo目录结构"></p>
 <h4 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h4><p>全局配置文件，网站的很多信息都在这里配置，诸如网站名称，副标题，描述，作者，语言，主题，部署等等参数。</p>
 <h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>hexo框架的参数和所依赖插件</p>
 <h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>scaffolds是“脚手架、骨架”的意思，当你新建一篇文章（hexo new ‘title’）的时候，hexo是根据这个目录下的文件进行构建的。基本不用关心。</p>
