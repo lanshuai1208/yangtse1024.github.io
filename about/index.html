@@ -599,6 +599,8 @@
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.js"></script>
+  <script src="/js/md5.min.js"></script>
    <script type="text/javascript">
 		var gitalk = new Gitalk({
 		  clientID: 'e891e8e73de3628b6583',
@@ -606,8 +608,8 @@
 		  repo: 'lanshuai2019.github.io',
 		  owner: 'lanShuai2019',
 		  admin: ['lanShuai2019'],
-		  id: location.pathname,
-		  distractionFreeMode: 'true'
+		  id: md5(location.href),
+		  distractionFreeMode: 'false'
 		})
 		gitalk.render('gitalk-container')
        </script>
