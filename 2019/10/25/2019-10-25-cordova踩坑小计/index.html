@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="清风揽月的博客">
 <meta property="og:description" content="cordova学习笔记混合APP是相对于原生APP和webapp而言的。原生APP使用java、swift等语言开发，调用设备底层接口方便，但是兼容性不理想，各种平台上要进行针对性的开发；webapp基于响应式web开发，可以在浏览器上运行，更易于兼容各种平台， 安装 安装Android SDK（随Android studio一同安装，开始时未检测到电脑中有SDK，会报错，忽略，之后会自动下载SD">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-25T10:51:40.458Z">
+<meta property="og:updated_time" content="2019-10-25T10:53:32.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019-10-25-cordova踩坑小计">
 <meta name="twitter:description" content="cordova学习笔记混合APP是相对于原生APP和webapp而言的。原生APP使用java、swift等语言开发，调用设备底层接口方便，但是兼容性不理想，各种平台上要进行针对性的开发；webapp基于响应式web开发，可以在浏览器上运行，更易于兼容各种平台， 安装 安装Android SDK（随Android studio一同安装，开始时未检测到电脑中有SDK，会报错，忽略，之后会自动下载SD">
@@ -422,13 +422,13 @@
 <li><p>chrome://inspect/#devices可以看到运行出来的web效果</p>
 </li>
 </ol>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol start="12">
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
 <li><p>cordova 对于设备 API的封装，都是以插件和事件的方式体现的</p>
 </li>
 <li><p>cordova 中对于事件的监听方式，都类似</p>
 </li>
 <li><p>deviceready：设备API准备就绪时执行，基于设备API的底层事件或方法，都要在deviceready事件完成后执行</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 参数1： 事件名， 参数2：回调函数，参数3： 是否在捕获阶段执行，默认false */</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'deviceready'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'设备API准备就绪，可以进行其他方法的调用 或者事件的监听'</span>);</span><br><span class="line">  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 参数1： 事件名， 参数2：回调函数，参数3： 是否在捕获阶段执行，默认false */</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'deviceready'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'设备API准备就绪，可以进行其他方法的调用 或者事件的监听'</span>);</span><br><span class="line">  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>pause: 当应用进入后台（挂起）时执行，参数同上</p>
 </li>
