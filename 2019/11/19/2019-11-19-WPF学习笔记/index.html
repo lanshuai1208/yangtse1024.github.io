@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="WPF,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第一课命令行编译新建test.txt   1234567namespace MyApp&amp;#123;	class Program&amp;#123;		static void Main(string[] args)&amp;#123;			System.Windows.MessageBox.Show(&amp;quot;Hello WPF&amp;quot;);		&amp;#125;	&amp;#125;&amp;#125;  编译   123csc">
+<meta name="keywords" content="WPF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-11-19-WPF学习笔记">
+<meta property="og:url" content="http://lanshuai2019.github.io/2019/11/19/2019-11-19-WPF学习笔记/index.html">
+<meta property="og:site_name" content="清风揽月的博客">
+<meta property="og:description" content="第一课命令行编译新建test.txt   1234567namespace MyApp&amp;#123;	class Program&amp;#123;		static void Main(string[] args)&amp;#123;			System.Windows.MessageBox.Show(&amp;quot;Hello WPF&amp;quot;);		&amp;#125;	&amp;#125;&amp;#125;  编译   123csc">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-24T11:25:15.917Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-11-19-WPF学习笔记">
+<meta name="twitter:description" content="第一课命令行编译新建test.txt   1234567namespace MyApp&amp;#123;	class Program&amp;#123;		static void Main(string[] args)&amp;#123;			System.Windows.MessageBox.Show(&amp;quot;Hello WPF&amp;quot;);		&amp;#125;	&amp;#125;&amp;#125;  编译   123csc">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://lanshuai2019.github.io/2019/11/19/2019-11-19-WPF学习笔记/">
+
+
+
+
+
+  <title>2019-11-19-WPF学习笔记 | 清风揽月的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">清风揽月的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">阳光明媚的日子里，你我携手并进</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanshuai2019.github.io/2019/11/19/2019-11-19-WPF学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="清风揽月">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="清风揽月的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-11-19-WPF学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-19T09:42:42+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/WPF/" itemprop="url" rel="index">
+                    <span itemprop="name">WPF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/19/2019-11-19-WPF学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/19/2019-11-19-WPF学习笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/11/19/2019-11-19-WPF学习笔记/" class="leancloud_visitors" data-flag-title="2019-11-19-WPF学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="第一课"><a href="#第一课" class="headerlink" title="第一课"></a>第一课</h1><h2 id="命令行编译"><a href="#命令行编译" class="headerlink" title="命令行编译"></a>命令行编译</h2><p>新建test.txt  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">namespace MyApp&#123;</span><br><span class="line">	class Program&#123;</span><br><span class="line">		static void Main(string[] args)&#123;</span><br><span class="line">			System.Windows.MessageBox.Show(&quot;Hello WPF&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">csc test.txt</span><br><span class="line">```  </span><br><span class="line">显示不包含不存在类型或命名空间MessageBox，然后引入一个dll文件，重新编译，生成test.exe可执行文件</span><br></pre></td></tr></table></figure>
+
+<p>csc /r:”C:\Users\Administrator\Documents\WPFLearn\WpfApp1\test\PresentationFramework.dll” test.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">现在编译后得到的应用程序是一个控制台应用程序，执行的时候会弹出控制台，就是黑框；如果我们不想让他弹出这个黑框，就要指定编译成Windows应用程序</span><br></pre></td></tr></table></figure>
+
+<p>csc /r:”C:\Users\Administrator\Documents\WPFLearn\WpfApp1\test\PresentationFramework.dll” /t:winexe test.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">也可以将程序编译成一个dll文件，这时指定的就是library</span><br></pre></td></tr></table></figure>
+
+<p>csc /r:”C:\Users\Administrator\Documents\WPFLearn\WpfApp1\test\PresentationFramework.dll” /t:library test.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">编译后得到test.dll文件</span><br><span class="line"></span><br><span class="line">## IDE编译</span><br><span class="line"></span><br><span class="line">新建C#控制台应用程序，依赖就是/r中的参数。  </span><br><span class="line">新建WPF应用程序，项目-项目属性可以看到输出类型是Windows应用程序，也可以改成控制台应用程序或者类库。  </span><br><span class="line"></span><br><span class="line">解决方案资源管理器中，解决方案对应最高层，一般一个解决方案对应客户的一个需求；  </span><br><span class="line">解决方案下面有项目，默认是一个项目，也可以新建项目；  </span><br><span class="line">项目一般有三种类型：控制台应用程序、Windows应用程序、类库；  </span><br><span class="line">项目编译出的结果叫做程序集（Assembly），每个项目都会产生一个程序集（xxx.xaml）</span><br><span class="line"></span><br><span class="line">源代码级别的描述  </span><br><span class="line">1. properties：资源文件的描述。  </span><br><span class="line">2. references：引用的类库，双击某个类库可以打开对象浏览器，可以查看类库中的命名空间，再点击命名空间，可以得到其所有方法。  </span><br><span class="line">3. App.xaml</span><br></pre></td></tr></table></figure>
+
+<p><application x:class="WpfApp1.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:WpfApp1" startupuri="MainWindow.xaml"><br>    &lt;Application.Resources&gt;</application></p>
+<pre><code>&lt;/Application.Resources&gt;</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">`StartupUri=&quot;MainWindow.xaml`意味着启动时会将MainWindows.xaml这个xaml所代表的Windows当做主窗体;</span><br><span class="line">4.MainWindow.xaml</span><br></pre></td></tr></table></figure>
+
+<p><window x:class="WpfApp1.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:WpfApp1" mc:ignorable="d" title="MainWindow" height="450" width="800"><br>    <grid></grid></window></p>
+<pre><code>&lt;/Grid&gt;</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xaml语言是一种声明性xmal语言，意味着没见到一个标签xmal编译器会声明一个标签对应的对象。上面的MainWindow.xmal声明了WIndows对象和Grid对象，Windows对象包含Grid对象；    </span><br><span class="line">`Title=&quot;MainWindow&quot; Height=&quot;450&quot; Width=&quot;800&quot;`对应Windows窗体对应的属性;  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">----------</span><br><span class="line">xmlns: xml命名空间，微软规定，不是网址，用于引入一系列类库；presentation主要与绘制界面、控件、布局有关，  </span><br><span class="line">xmlns:x: 引入xaml，与编译、解析xaml文件有关，xaml规定，必须有一个命名空间不加名字，这个空间叫做默认命名空间，比如上面的xmlns。  </span><br><span class="line">如果去掉默认命名空间是编译不过的，比如下面</span><br></pre></td></tr></table></figure>
+
+<p><window x:class="WpfApp1.MainWindow" xmlns:n="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:WpfApp1" mc:ignorable="d" title="HelloWPF" height="200" width="300"><br>    <grid></grid></window></p>
+<pre><code>&lt;/Grid&gt;</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">xaml文件编译生成的类和C# 文件编译生成的类是同一个类, `partial`关键字说明类可以分开写，最后合在一起，`x:Class=&quot;WpfApp1.MainWindow&quot;`意思是最后合并到WpfApp1命名空间中的MainWindow类中，也就是之指示xaml编译器将编译结果和那个C# 编译的类合并在一起。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"># 第二课</span><br><span class="line">## 树状结构</span><br><span class="line">不同于将控件放到同一个平面上的其他UI界面（C#应用程序、VB、MFC等），WPF使用xaml语言编写，xaml派生自xml，而xml是一种树状结构，所以WPF编写的界面也是一种树状结构。</span><br><span class="line"></span><br><span class="line">## 在xaml中为对象属性赋值</span><br><span class="line">### 属性赋值</span><br><span class="line">`attribute = value`的形式，比如上面的Title=&quot;HelloWPF&quot; Height=&quot;200&quot; 、Width=&quot;300&quot;这些。最简单。  </span><br><span class="line">想要控制启动的位置：`WindowStartupLocation=&quot;CenterScreen&quot;`  </span><br><span class="line">设置一个黑色边框,绿色背景的的矩形：  </span><br><span class="line">```xml</span><br><span class="line">&lt;Window x:Class=&quot;HappyWPF.MainWindow&quot;</span><br><span class="line">        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span><br><span class="line">        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span><br><span class="line">        xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span><br><span class="line">        xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span><br><span class="line">        xmlns:local=&quot;clr-namespace:HappyWPF&quot;</span><br><span class="line">        mc:Ignorable=&quot;d&quot;</span><br><span class="line">        Title=&quot;MainWindow&quot; Height=&quot;450&quot; Width=&quot;800&quot; WindowStartupLocation=&quot;CenterScreen&quot;&gt;</span><br><span class="line">    &lt;Grid&gt;</span><br><span class="line">        &lt;Rectangle Width=&quot;200&quot; Height=&quot;200&quot; Stroke=&quot;Black&quot; Fill=&quot;Green&quot;&gt;&lt;/Rectangle&gt;</span><br><span class="line">    &lt;/Grid&gt;</span><br><span class="line">&lt;/Window&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如要花一个三角形，从左上角出发，lineTO（200,100），在连到（100,200），然后闭合，边界为黑，背景为红。这种用path来绘制的基本上就是第一种方式能达到的最复杂的类型了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">Path</span> <span class="attr">Data</span>=<span class="string">"M 0,0 L 200,100 L 100, 200 Z"</span> <span class="attr">Stroke</span>=<span class="string">"Black"</span> <span class="attr">Fill</span>=<span class="string">"Blue"</span>&gt;</span><span class="tag">&lt;/<span class="name">Path</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这种方式的缺陷是无法赋非常复杂的值。<br>映射方法：<br>跳转到后台（HappyWPF.xaml.cs），写一个自己的类Human,准备两个属性，一个string类型的Name，一个Human类型的Child。  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">namespace HappyWPF</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/// &lt;summary&gt;</span></span><br><span class="line">    <span class="comment">/// MainWindow.xaml 的交互逻辑</span></span><br><span class="line">    <span class="comment">/// &lt;/summary&gt;</span></span><br><span class="line">    public partial class MainWindow : Window</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MainWindow</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Human</span></span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        <span class="keyword">public</span> string Name &#123; get; set; &#125;</span><br><span class="line">        <span class="keyword">public</span> Human Child &#123; get; set; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们尝试用标签的形式声明一个Human对象，现将命名空间引入，本地一般叫做local</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlns:local=<span class="string">"clr-namespace:HappyWPF"</span></span><br></pre></td></tr></table></figure>
+
+<p>然后将其作为一个资源声明出来，资源是WPF中一个非常重要的概念，WPF以资源字典的形式维护着一系列的资源，我们知道字典在检索内容的是否是通过索引检索的。（这里可能要调试一下，否则找不到命名空间中对应的类）  </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">Window.Resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">local:Human</span> <span class="attr">x:Key</span>=<span class="string">"human1"</span> <span class="attr">Name</span>=<span class="string">"Tim"</span>&gt;</span><span class="tag">&lt;/<span class="name">local:Human</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">Window.Resources</span>&gt;</span></span><br><span class="line">```  </span><br><span class="line">先为human对象准备一个检索，检索是命名空间中一个叫做Key的对象。</span><br><span class="line">新建一个按钮，挂上一个事件处理函数，双击按钮，打开事件处理器。</span><br><span class="line">```xml</span><br><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">"点我"</span> <span class="attr">Click</span>=<span class="string">"Button_Click"</span> <span class="attr">Width</span>=<span class="string">"100"</span> <span class="attr">Height</span>=<span class="string">"60"</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>首先将Windows资源通过FindResource和Key检索出来,FindResource(key)方法返回的是Object类型，我们把它转换成Human类型。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Human h = this.FindResource(&quot;human&quot;) as Human;</span><br></pre></td></tr></table></figure>
+
+<p>as 可能返回一个Human类型，也可能返回一个空句柄，如果返回一个空句柄的话就会抛出异常，我们要做一次校验。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (h != <span class="literal">null</span>)</span><br><span class="line">&#123;</span><br><span class="line">   MessageBox.Show(h.Name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>点击，确定可以弹出Tim。这里Name是一个字符串，得到的话很正常，但是Child属性不是，它是一个复杂类型，在资源中直接设置是无法转过去的。<br>这里需要添加一个Converter类。这个类要派生自TypeConverter，派生这个类的时候，要引入<code>System.ComponentModel</code>命名空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using System.ComponentModel</span><br></pre></td></tr></table></figure>
+
+<p>这里，我们重写ConvertFrom方法（输入override + 方法名，自动生成重写方法）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)</span><br><span class="line">&#123;</span><br><span class="line">    return base.ConvertFrom(context, culture, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面方法的参数中，最后一个value参数就是我们在xaml的资源里通过attribute传入的参数。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class NameToHumanTypeConverter : TypeConverter</span><br><span class="line">   &#123;</span><br><span class="line">       public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)</span><br><span class="line">       &#123;</span><br><span class="line">           string name = value.ToString();</span><br><span class="line">           Human child = new Human();</span><br><span class="line">           child.Name = name;</span><br><span class="line">           return child;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在，整个converter类如上所示，可以在xaml中设置attribute，比如child=”John”来创建子Human，子Human的Name属性就是”John”。<br>下面，我们要将这个类通过特性的形式，附加到Human类上去。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[TypeConverterAttribute(<span class="keyword">typeof</span>(NameToHumanTypeConverter))]</span><br></pre></td></tr></table></figure>
+
+<p>其中，NameToHumanTypeConverter就是上面声明的converter类。<br>修改点击事件，将孩子的名字也写出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">private void Button_Click(object sender, RoutedEventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    Human h = this.FindResource(&quot;human&quot;) as Human;</span><br><span class="line">    if (h != null)</span><br><span class="line">    &#123;</span><br><span class="line">        MessageBox.Show(&quot;本人名字:&quot; + h.Name + &quot;\n&quot; + &quot;孩子名字:&quot; + h.Child.Name);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>完整代码：<br>xaml(MainWindow.xaml):</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Window</span> <span class="attr">x:Class</span>=<span class="string">"HappyWPF.MainWindow"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">xmlns</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">xmlns:x</span>=<span class="string">"http://schemas.microsoft.com/winfx/2006/xaml"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">xmlns:d</span>=<span class="string">"http://schemas.microsoft.com/expression/blend/2008"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">xmlns:mc</span>=<span class="string">"http://schemas.openxmlformats.org/markup-compatibility/2006"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">xmlns:local</span>=<span class="string">"clr-namespace:HappyWPF"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">mc:Ignorable</span>=<span class="string">"d"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Title</span>=<span class="string">"MainWindow"</span> <span class="attr">Height</span>=<span class="string">"450"</span> <span class="attr">Width</span>=<span class="string">"800"</span> <span class="attr">WindowStartupLocation</span>=<span class="string">"CenterScreen"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Window.Resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">local:Human</span> <span class="attr">x:Key</span>=<span class="string">"human"</span> <span class="attr">Name</span>=<span class="string">"Tim"</span> <span class="attr">Child</span>=<span class="string">"John"</span>&gt;</span><span class="tag">&lt;/<span class="name">local:Human</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Window.Resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">"点我"</span> <span class="attr">Click</span>=<span class="string">"Button_Click"</span> <span class="attr">Width</span>=<span class="string">"100"</span> <span class="attr">Height</span>=<span class="string">"60"</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Window</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>后台代码(MainWindow.xaml.cs)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Globalization;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows;</span><br><span class="line">using System.Windows.Controls;</span><br><span class="line">using System.Windows.Data;</span><br><span class="line">using System.Windows.Documents;</span><br><span class="line">using System.Windows.Input;</span><br><span class="line">using System.Windows.Media;</span><br><span class="line">using System.Windows.Media.Imaging;</span><br><span class="line">using System.Windows.Navigation;</span><br><span class="line">using System.Windows.Shapes;</span><br><span class="line"></span><br><span class="line">namespace HappyWPF</span><br><span class="line">&#123;</span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// MainWindow.xaml 的交互逻辑</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    public partial class MainWindow : Window</span><br><span class="line">    &#123;</span><br><span class="line">        public MainWindow()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Button_Click(object sender, RoutedEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Human h = this.FindResource(&quot;human&quot;) as Human;</span><br><span class="line">            if (h != null)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(&quot;本人名字:&quot; + h.Name + &quot;\n&quot; + &quot;孩子名字:&quot; + h.Child.Name);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [TypeConverterAttribute(typeof(NameToHumanTypeConverter))]</span><br><span class="line">    public class Human</span><br><span class="line">    &#123;</span><br><span class="line">        public string Name &#123; get; set; &#125;</span><br><span class="line">        public Human Child &#123; get; set; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public class NameToHumanTypeConverter : TypeConverter</span><br><span class="line">    &#123;</span><br><span class="line">        public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)</span><br><span class="line">        &#123;</span><br><span class="line">            string name = value.ToString();</span><br><span class="line">            Human child = new Human();</span><br><span class="line">            child.Name = name;</span><br><span class="line">            return child;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="属性标签"><a href="#属性标签" class="headerlink" title="属性标签"></a>属性标签</h3><p>属性标签也是一种xaml标签，对应的是对象的属性，不同于其他xaml标签，属性标签不用来声明对象，而是用来声明对象的属性。以下代码可以展示一个按钮，按钮上的文字是Stop，但是如果想让其上是一个图标或者其他比较复杂的图形，就不能直接添加到Content中了，这时候就需要属性标签来进行赋值</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">Width</span>=<span class="string">"120"</span> <span class="attr">Height</span>=<span class="string">"30"</span> <span class="attr">Content</span>=<span class="string">"Stop"</span>&gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在Button标签中添加一层&lt;Button.Content&gt;标签来指定Button这个对象的Content属性。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">Width</span>=<span class="string">"120"</span> <span class="attr">Height</span>=<span class="string">"30"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">Button.Content</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">Rectangle</span> <span class="attr">Width</span>=<span class="string">"20"</span> <span class="attr">Height</span>=<span class="string">"20"</span> <span class="attr">Stroke</span>=<span class="string">"DarkGreen"</span> <span class="attr">Fill</span>=<span class="string">"LawnGreen"</span>&gt;</span><span class="tag">&lt;/<span class="name">Rectangle</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">Button.Content</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>一个更加复杂的例子，用渐变色的颜色填充矩形，这时直接在标签Fill属性中设置就做不到了，因为Fill中只能能赋简单值</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Rectangle</span> <span class="attr">Width</span>=<span class="string">"200"</span> <span class="attr">Height</span>=<span class="string">"160"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Rectangle.Fill</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">LinearGradientBrush</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">LinearGradientBrush.StartPoint</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--StartPoint说明需要一个点，从什么地方开始刷--&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Point</span> <span class="attr">X</span>=<span class="string">"0"</span> <span class="attr">Y</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">Point</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--图形左上角--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">LinearGradientBrush.StartPoint</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">LinearGradientBrush.EndPoint</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">Point</span> <span class="attr">X</span>=<span class="string">"1"</span> <span class="attr">Y</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">Point</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">LinearGradientBrush.EndPoint</span>&gt;</span></span><br><span class="line">                    <span class="comment">&lt;!--给笔刷上颜色--&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">LinearGradientBrush.GradientStops</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">GradientStopCollection</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">GradientStop</span> <span class="attr">Offset</span>=<span class="string">"0.2"</span> <span class="attr">Color</span>=<span class="string">"LightBlue"</span>&gt;</span><span class="tag">&lt;/<span class="name">GradientStop</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">GradientStop</span> <span class="attr">Offset</span>=<span class="string">"0.7"</span> <span class="attr">Color</span>=<span class="string">"DarkBlue"</span>&gt;</span><span class="tag">&lt;/<span class="name">GradientStop</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">GradientStop</span> <span class="attr">Offset</span>=<span class="string">"1.0"</span> <span class="attr">Color</span>=<span class="string">"Blue"</span>&gt;</span><span class="tag">&lt;/<span class="name">GradientStop</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">GradientStopCollection</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">LinearGradientBrush.GradientStops</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">LinearGradientBrush</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Rectangle.Fill</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Rectangle</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里使用LinearGradientBrush画渐变色，先指定起点和终点，然后在起点和终点之间会建立渐变的过程线，Offset属性就是从起点到终点的偏移量，如在0.2处颜色变到浅蓝，在0.7处颜色变为深蓝，颜色变化随渐变线方向推进，与渐变线垂直的方向上颜色相同。<br>现在，我们优化一下代码，有些属性可以用attribute=值的方式来写。  </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Rectangle</span> <span class="attr">Width</span>=<span class="string">"200"</span> <span class="attr">Height</span>=<span class="string">"160"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Rectangle.Fill</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">LinearGradientBrush</span> <span class="attr">StartPoint</span>=<span class="string">"0,0"</span> <span class="attr">EndPoint</span>=<span class="string">"1,1"</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!--给笔刷上颜色--&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">LinearGradientBrush.GradientStops</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">GradientStop</span> <span class="attr">Offset</span>=<span class="string">"0.2"</span> <span class="attr">Color</span>=<span class="string">"LightBlue"</span>&gt;</span><span class="tag">&lt;/<span class="name">GradientStop</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">GradientStop</span> <span class="attr">Offset</span>=<span class="string">"0.7"</span> <span class="attr">Color</span>=<span class="string">"DarkBlue"</span>&gt;</span><span class="tag">&lt;/<span class="name">GradientStop</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">GradientStop</span> <span class="attr">Offset</span>=<span class="string">"1.0"</span> <span class="attr">Color</span>=<span class="string">"Blue"</span>&gt;</span><span class="tag">&lt;/<span class="name">GradientStop</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">LinearGradientBrush.GradientStops</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">LinearGradientBrush</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">Rectangle.Fill</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Rectangle</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其实，起点和终点默认即使（0,0）和（1,1）可以省略。</p>
+<h3 id="标记扩展"><a href="#标记扩展" class="headerlink" title="标记扩展"></a>标记扩展</h3><p>和attribute=值的方式相似，但是用{}括起来。<br>引入空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlns:sys=&quot;clr-namespace:System;assembly=mscorlib&quot;</span><br></pre></td></tr></table></figure>
+
+<p>添加资源</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Window.Resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">sys:String</span> <span class="attr">x:Key</span>=<span class="string">"stringHello"</span>&gt;</span>Hello WPF!<span class="tag">&lt;/<span class="name">sys:String</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Window.Resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>加入</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Height</span>=<span class="string">"24"</span> <span class="attr">Width</span>=<span class="string">"120"</span> <span class="attr">Background</span>=<span class="string">"LightBlue"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">Text</span>=<span class="string">"&#123;StaticResource ResourceKey=stringHello&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">TextBlock</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>现在要实现一个根据滑块滑动位置显示数值的功能。  </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"24"</span>&gt;</span><span class="tag">&lt;/<span class="name">RowDefinition</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"4"</span>&gt;</span><span class="tag">&lt;/<span class="name">RowDefinition</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"24"</span>&gt;</span><span class="tag">&lt;/<span class="name">RowDefinition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">TextBox</span> <span class="attr">x:Name</span>=<span class="string">"tb"</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding ElementName=sld, Path=Value&#125;"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Slider</span> <span class="attr">x:Name</span>=<span class="string">"sld"</span> <span class="attr">Grid.Row</span>=<span class="string">"2"</span> <span class="attr">Value</span>=<span class="string">"50"</span> <span class="attr">Maximum</span>=<span class="string">"100"</span> <span class="attr">Minimum</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">Slider</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="第三课"><a href="#第三课" class="headerlink" title="第三课"></a>第三课</h1><h2 id="事件处理器和代码后置"><a href="#事件处理器和代码后置" class="headerlink" title="事件处理器和代码后置"></a>事件处理器和代码后置</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">x:Name</span>=<span class="string">"button1"</span> <span class="attr">Content</span>=<span class="string">"Click me!"</span> <span class="attr">Width</span>=<span class="string">"200"</span> <span class="attr">Height</span>=<span class="string">"100"</span> <span class="attr">Click</span>=<span class="string">"button1_Click"</span></span></span><br><span class="line"><span class="tag">   &gt;</span><span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">private void button1_Click(object sender, RoutedEventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(&quot;Clicked&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>事件的拥有者-Button,事件-Click,事件的响应者-窗体, 事件处理函数-button1_Click,Button 订阅了button1_Click。</p>
+<h2 id="导入程序集合引用其中的名称空间"><a href="#导入程序集合引用其中的名称空间" class="headerlink" title="导入程序集合引用其中的名称空间"></a>导入程序集合引用其中的名称空间</h2><p>模块化程序设计方式，把应用程序切分成一个个组件，这些组件可以在不同的项目中引用和共享。<br>现在有一个功能是计算员工工资，计算工资的功能需要做成一个组件，这个组件可以在应用程序的各个地方显示和引用。现在先做这个组件，然后再把组件引用到主窗体上。<br>我们把组件放到另外一个项目里，我们选择WPFControlLibrary，删除默认生成的UserControl1，新建UserControl（用户控件），在控件中添加内容。<br>写好之后引用该组件，在父组件中<code>引用</code>-&gt;<code>右键</code>-&gt;<code>添加引用</code>-&gt;<code>项目</code>，找到刚才编写的组件，选择，引用</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/WPF/" rel="tag"># WPF</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/17/2019-11-17-记录一个Echarts组件渲染的问题/" rel="next" title="2019-11-17-记录一个Echarts组件渲染的问题">
+                <i class="fa fa-chevron-left"></i> 2019-11-17-记录一个Echarts组件渲染的问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/24/2019-11-24-Git学习笔记/" rel="prev" title="2019-11-24-Git学习笔记">
+                2019-11-24-Git学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+       <div id="gitalk-container">
+       </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="清风揽月">
+            
+              <p class="site-author-name" itemprop="name">清风揽月</p>
+              <p class="site-description motion-element" itemprop="description">一个兴趣使然的小小博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一课"><span class="nav-number">1.</span> <span class="nav-text">第一课</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行编译"><span class="nav-number">1.1.</span> <span class="nav-text">命令行编译</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性标签"><span class="nav-number">1.1.1.</span> <span class="nav-text">属性标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记扩展"><span class="nav-number">1.1.2.</span> <span class="nav-text">标记扩展</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三课"><span class="nav-number">2.</span> <span class="nav-text">第三课</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理器和代码后置"><span class="nav-number">2.1.</span> <span class="nav-text">事件处理器和代码后置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入程序集合引用其中的名称空间"><span class="nav-number">2.2.</span> <span class="nav-text">导入程序集合引用其中的名称空间</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+          <h3 class="widget-title">Tag Cloud</h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitalk/">Gitalk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WPF/">WPF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cordova/">cordova</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/echarts/">echarts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/websocket/">websocket</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人博客/">个人博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/混合APP/">混合APP</a><span class="tag-list-count">2</span></li></ul>
+              </canvas>
+          </div>
+      </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">清风揽月</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'Skv2oe36KbtTyT1SAuiQECQj-gzGzoHsz',
+        appKey: 'k0cWJfi7UzKcp90nBmMau9mH',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.js"></script>
+  <script src="/js/md5.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: 'e891e8e73de3628b6583',
+		  clientSecret: '848e732d103d17b925216ed11ddf9bdb08a4d898',
+		  repo: 'lanshuai2019.github.io',
+		  owner: 'lanShuai2019',
+		  admin: ['lanShuai2019'],
+		  id: md5(location.href),
+		  distractionFreeMode: 'false'
+		})
+		gitalk.render('gitalk-container')
+       </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Skv2oe36KbtTyT1SAuiQECQj-gzGzoHsz", "k0cWJfi7UzKcp90nBmMau9mH");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
